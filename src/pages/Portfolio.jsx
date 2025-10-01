@@ -11,7 +11,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("https://tfsweb-backend.onrender.com"); // HTTPS backend
+        const res = await axios.get("https://tfsweb-backend.onrender.com/api/projects"); // HTTPS backend
         if (res.data.success) setProjects(res.data.data);
       } catch (err) {
         console.error("Error fetching projects:", err.response?.data || err.message);
