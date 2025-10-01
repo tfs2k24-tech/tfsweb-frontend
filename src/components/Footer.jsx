@@ -8,7 +8,7 @@ import { MdAddCall } from "react-icons/md";
 const Footer = () => {
   const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/tfs_2k24?igsh=OHF3dzRnamFrczd3', label: 'Instagram' },
-    { icon: FaWhatsapp, href: 'https://wa.me/916380772424', label: 'WhatsApp' }, // ✅ WhatsApp link
+    { icon: FaWhatsapp, href: 'https://wa.me/917598503596', label: 'WhatsApp' }, // ✅ WhatsApp link
     { icon: MdAddCall, href: 'tel:+916380772424', label: 'Call' }, // ✅ Call works
     { 
   icon: Mail, 
