@@ -1,0 +1,17 @@
+@import "tailwindcss";
+/* Make sure the whole page has a dark background */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a; /* or your dark theme color */
+  color: #fff; /* optional - ensures text is readable */
+}
+
+/* Ensure the root React container fills the page */
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a0a0a;
+}
