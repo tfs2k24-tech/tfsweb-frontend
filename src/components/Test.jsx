@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Send, Star, X } from "lucide-react";
 import axios from "axios";
 
-const API_URL = "https://tfsweb-backend.onrender.com"; // ⚠️ Use http unless SSL is configured
+const API_URL = "https://tfsweb-backend.onrender.com/api/testimonials"; // ⚠️ Use http unless SSL is configured
 
 const TestimonialForm = ({ editingTestimonial, onSave }) => {
   const [formData, setFormData] = useState({
