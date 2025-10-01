@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import axios from "axios";
 
-const API_URL = "https://tfsweb-backend.onrender.com"; // ⚠️ Use http if SSL not configured
+const API_URL = "https://tfsweb-backend.onrender.com/api/testimonials"; // ⚠️ Use http if SSL not configured
 
 const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
