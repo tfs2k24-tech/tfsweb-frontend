@@ -42,7 +42,7 @@ const QueryForm = () => {
   setIsSubmitting(true);
 
   try {
-    const response = await axios.post('https://tfsweb-backend.onrender.com', formData, {
+    const response = await axios.post('https://tfsweb-backend.onrender.com/api/queries', formData, {
       withCredentials: true
     });
 
