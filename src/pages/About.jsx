@@ -10,7 +10,7 @@ const About = () => {
     // Fetch team data from backend
     const fetchTeam = async () => {
       try {
-        const response = await axios.get("https://tfsweb-backend.onrender.com");
+        const response = await axios.get("https://tfsweb-backend.onrender.com/api/teams");
         setTeam(response.data);
       } catch (error) {
         console.error("Error fetching team data:", error);
