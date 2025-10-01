@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Github } from "lucide-react";
+import { X } from "lucide-react";
 import axios from "axios";
 
 const Portfolio = () => {
@@ -11,7 +11,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("https://tfsweb-backend.onrender.com/api/projects"); // HTTPS backend
+        const res = await axios.get("https://tfsweb-backend.onrender.com/api/projects");
         if (res.data.success) setProjects(res.data.data);
       } catch (err) {
         console.error("Error fetching projects:", err.response?.data || err.message);
@@ -131,38 +131,10 @@ const Portfolio = () => {
               </div>
 
               <div className="p-8">
-                <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h2>
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {selectedProject.category || "N/A"}
-                    </span>
-                  </div>
-                  <div className="flex gap-4 flex-wrap">
-                    {selectedProject.link && (
-                      <a
-                        href={selectedProject.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700 transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live Demo
-                      </a>
-                    )}
-                    {selectedProject.github && (
-                      <a
-                        href={selectedProject.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-                      >
-                        <Github className="w-4 h-4" />
-                        GitHub
-                      </a>
-                    )}
-                  </div>
-                </div>
+                <h2 className="text-3xl font-bold text-white mb-4">{selectedProject.title}</h2>
+                <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium mb-6 inline-block">
+                  {selectedProject.category || "N/A"}
+                </span>
 
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                   {selectedProject.fullDescription || selectedProject.description}
