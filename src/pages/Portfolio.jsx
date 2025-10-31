@@ -78,7 +78,8 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-auto max-h-64 object-contain bg-black transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -113,18 +114,19 @@ const Portfolio = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-gray-900 rounded-2xl border border-gray-800 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-gray-900 rounded-2xl border border-gray-800 max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative">
+              <div className="relative bg-black">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-64 object-cover rounded-t-2xl"
+                  className="w-full h-auto max-h-[70vh] object-contain rounded-t-2xl"
+                  loading="lazy"
                 />
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+                  className="absolute top-4 right-4 p-2 bg-black/70 rounded-full text-white hover:bg-black/90 transition-colors"
                 >
                   <X className="w-6 h-6" />
                 </button>
